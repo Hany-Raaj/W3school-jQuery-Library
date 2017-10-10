@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="font-awesome/font-awesome.min.css">
+   
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+   
+   <!-- Custom CSS -->
+   <link rel="stylesheet" href="css/stylesheet.css">
+   
+   
+   
+   <!-- jQuery -->
+   
+   <!-- Selectors Button -->
+    <script src="jQuery/jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#selectorbutton").click(function() {
+                $("#selectorp").hide();
+            });
+        });
+    </script>
+    
+    
+    <!-- Events -->
+    <script>
+        $(document).ready(function(){
+            $("#eventp").click(function(){
+               $(this).hide(); 
+            });
+        });
+    </script>    <!-- End of Events -->
+    
+    
+    <!-- Events Double Click -->
+    <script>
+        $(document).ready(function() {
+            $("#doubleclick").dblclick(function() {
+                $(this).hide();
+            });
+        });
+    </script>    <!-- End of Events Double Click -->
+    
+    
+    <!-- Mouse Enter -->
+    <script>
+        $(document).ready(function(){
+            $("#documentp").mouseenter(function(){
+                alert("You entered p1!");
+            });
+        });
+    </script>    <!-- End of Mouse Enter -->
+    
+    
+    <!-- Mouse Leave -->
+    <script>
+        $(document).ready(function(){
+            $("#documentpleave").mouseleave(function(){
+                alert("Bye! You now leave p1!");
+            });
+        });
+    </script>    <!-- End of Mouse Leave -->
+    
+    
+    <!-- Mouse Down Over -->
+    <script>
+    $(document).ready(function(){
+        $("#documentpdown").mousedown(function(){
+            alert("Mouse down over p1!");
+        });
+    });
+    </script>    <!-- End of Mouse Down Over -->
+    
+    
+    <!-- Mouse Hover -->
+    <script>
+        $(document).ready(function(){
+            $("#documenthover").hover(function(){
+                alert("You entered hover!");
+            },
+            function(){
+                alert("Bye! You now leave p1!");
+            }); 
+        });
+    </script>    <!-- End of Mouse Hover -->
+    
+    
+    <!-- Mouse Focus -->
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color", "#cccccc");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color", "#ffffff");
+            });
+        });
+    </script>    <!-- End of Mouse Focus -->
+
+
+    <!-- On Method -->
+    <script>
+        $(document).ready(function(){
+            $("#onmethod").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                },  
+                mouseleave: function(){
+                    $(this).css("background-color", "lightblue");
+                }, 
+                click: function(){
+                    $(this).css("background-color", "yellow");
+                }  
+            });
+        });
+    </script>    <!-- End of On Method -->
+
+    
+    <!-- Hide & Show -->
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#clickhide").hide();
+            });
+            $("#show").click(function(){
+                $("#clickhide").show();
+            });
+        });
+    </script>    <!-- End of Hide & Show -->
+    
+    
+    <!-- Slow Hide -->
+    <script>
+        $(document).ready(function(){
+            $("#slowbutton").click(function(){
+                $("#slow").hide(1000);
+            });
+        });
+    </script>    <!-- End of Slow Hide -->
+    
+    
+    <!-- Toggle -->
+    <script>
+        $(document).ready(function(){
+            $("#togglebutton").click(function(){
+                $("#toggle").toggle();
+            });
+        });
+    </script>    <!-- End of Toggle -->
+    
+    
+    <!-- Fade In -->
+    <script>
+        $(document).ready(function(){
+            $("#fadein").click(function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            });
+        });
+    </script>    <!-- End of Fade In -->
+    
+    
+    <!-- Fade Out -->
+    <script>
+        $(document).ready(function(){
+            $("#fadeout").click(function(){
+                $("#fadeoutdiv1").fadeOut();
+                $("#fadeoutdiv2").fadeOut("slow");
+                $("#fadeoutdiv3").fadeOut(3000);
+            });
+        });
+    </script>    <!-- End of Fade Out -->
+    
+    
+    <!-- Fade In/Out -->
+    <script>
+        $(document).ready(function(){
+            $("#inout").click(function(){
+                $("#inoutdiv1").fadeToggle();
+                $("#inoutdiv2").fadeToggle("slow");
+                $("#inoutdiv3").fadeToggle(3000);
+            });
+        });
+    </script>    <!-- End of Fade In/Out -->
+    
+    
+    <!-- Slide Down -->
+    <script> 
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown("slow");
+            });
+        });
+    </script>    <!-- End of Slide Down -->
+    
+    
+    <!-- Slide Up -->
+    <script> 
+        $(document).ready(function(){
+            $("#upflip").click(function(){
+                $("#uppanel").slideUp("slow");
+            });
+        });
+    </script>    <!-- End of Slide Up -->
+    
+    
+    <!-- SLide Up/Down -->
+    <script> 
+        $(document).ready(function(){
+            $("#updownflip").click(function(){
+                $("#updownpanel").slideToggle("slow");
+            });
+        });
+    </script>    <!-- End of SLide Up/Down -->
+    
+    
+    <!-- Animated -->
+    <script> 
+        $(document).ready(function(){
+            $("#animated").click(function(){
+                $("#animatedbutton").animate({left: '250px'});
+            });
+        });
+    </script>    <!-- End of Animated -->
+    
+    
+    <!-- Manipulate Multiple -->
+    <script> 
+        $(document).ready(function(){
+            $("#multiplebutton").click(function(){
+                $("#multiple").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+            });
+        });
+    </script>    <!-- End of Manipulate Multiple -->
+    
+
+        
+    <!-- Relative Values -->
+    <script> 
+        $(document).ready(function(){
+            $("#relativebutton").click(function(){
+                $("#relative").animate({
+                    left: '250px',
+                    height: '+=150px',
+                    width: '+=150px'
+                });
+            });
+        });
+    </script>    <!-- End of Relative Values -->
+    
+    
+    <!-- Pre-defined Values -->
+    <script> 
+        $(document).ready(function(){
+            $("#predefinebutton").click(function(){
+                $("#predefine").animate({
+                    height: 'toggle'
+                });
+            });
+        });
+    </script>    <!-- End of Pre-defined Values -->
+    
+    
+    <!-- Queue Functionality -->
+    <script> 
+        $(document).ready(function(){
+            $("#functionalitybutton").click(function(){
+                var div = $("#functionality");
+                div.animate({height: '300px', opacity: '0.4'}, "slow");
+                div.animate({width: '300px', opacity: '0.8'}, "slow");
+                div.animate({height: '100px', opacity: '0.4'}, "slow");
+                div.animate({width: '100px', opacity: '0.8'}, "slow");
+            });
+        });
+    </script>    <!-- End of Queue Functionality -->
+    
+    
+    <!-- Queue Functionality - 2 -->
+    <script> 
+        $(document).ready(function(){
+            $("#queue2").click(function(){
+                var div = $("#queuediv");  
+                div.animate({left: '100px'}, "slow");
+                div.animate({fontSize: '3em'}, "slow");
+            });
+        });
+    </script>    <!-- End of Queue Functionality - 2 -->
+    
+    
+    <!-- Stop Sliding -->
+    <script> 
+        $(document).ready(function(){
+            $("#stopflip").click(function(){
+                $("#stoppanel").slideDown(5000);
+            });
+            $("#stop").click(function(){
+                $("#stoppanel").stop();
+            });
+        });
+    </script>    <!-- End of Stop Sliding -->
+    
+    
+    <!-- Paragraph Hide & Notifications -->
+    <script>
+        $(document).ready(function(){
+            $("#phide").click(function(){
+                $("#pnotifications").hide("slow", function(){
+                    alert("The paragraph is now hidden");
+                });
+            });
+        });
+    </script>        <!-- End of Paragraph Hide & Notifications -->
+    
+    
+    <!-- Method Chaining -->
+    <script>
+        $(document).ready(function(){
+            $("#method").click(function(){
+                $("#methodp1").css("color", "red").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>    <!-- End of Method Chaining -->
+</head>
+
+<body>
+    <!-- Heading -->
+    <h1 class="text-center">Hello, jQuery Library!</h1> <!-- End of Heading -->
+    
+    <hr>
+    
+    
+    <!-- Div - 1 -->
+    <div class="row">
+    
+        <!-- Selectors Button -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <h3>This is a heading</h3>
+            <p id="selectorp">This is a paragraph.</p>
+            <p id="selectorp">This is another paragraph.</p>
+
+            <button id="selectorbutton">Click me to hide paragraphs</button><br><hr>
+        </div>    <!-- End of Selectors Button -->
+        
+        
+        <!-- Events -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <p id="eventp">If you click on me, I will disappear.</p>
+            <p id="eventp">Click me away!</p>
+            <p id="eventp">Click me too!</p><br><hr>
+        </div>    <!-- End of Events -->
+        
+        
+        <!-- Events Double Click -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <p id="doubleclick">If you double-click on me, I will disappear.</p>
+            <p id="doubleclick">Click me away!</p>
+            <p id="doubleclick">Click me too!</p><br><hr>
+        </div>    <!-- End of Events Double Click -->
+    </div>    <!-- End of Div - 1 -->
+    
+    
+    <!-- Div - 2 -->
+    <div class="row">
+       
+       <!-- Mouse Enter -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <p id="documentp">Enter this paragraph.</p><br><hr>
+        </div>    <!-- End of Mouse Enter -->
+        
+        
+        <!-- Mouse Leave -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <p id="documentpleave">This is Mouse Leave paragraph.</p><br><hr>
+        </div>    <!-- End of Mouse Leave -->
+        
+        
+        
+        <!-- Mouse Down Over -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <p id="documentpdown">This is Mouse Down Over paragraph.</p><br><hr>
+        </div>    <!-- End of Mouse Down Over -->
+    </div>    <!-- End of Div - 2 -->
+        
+        
+    <!-- Div - 3 -->
+    <div class="row">
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+        <!-- Mouse Hover -->
+        <p id="documenthover">This is Hover paragraph.</p><br><hr>
+        </div>    <!-- End of Hover -->
+        
+        
+        <!-- Mouse Focus -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+        Name: <input type="text" name="fullname" placeholder="hany raaj"><br>
+        Email: <input type="text" name="email" placeholder="name@example.com"><br><hr>
+        </div>    <!-- End of Mouse Focus -->
+        
+        
+        <!-- On Method -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <p id="onmethod">Click or move the mouse pointer over this paragraph.</p><br><hr>
+        </div>    <!-- End of On Method -->
+    </div>    <!-- End of Div - 3 -->
+    
+    
+    <!-- Div - 4 -->
+    <div class="row">
+       <!-- Hide & Show -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <p id="clickhide">If you click on the "Hide" button, I will disappear.</p>
+            <button id="hide">Hide</button>
+            <button id="show">Show</button><br><hr>
+        </div>    <!-- End of Hide & Show -->
+        
+        
+        <!-- Slow Hide -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <button id="slowbutton">Hide</button>
+
+            <p id="slow">This is a paragraph with little content.</p>
+            <p id="slow">This is another small paragraph.</p><br><hr>
+        </div>    <!-- End of Slow Hide -->
+        
+        
+        <!-- Toggle -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <button id="togglebutton">Toggle between hiding and showing the paragraphs</button>
+
+            <p id="toggle">This is a paragraph with little content.</p>
+            <p id="toggle">This is another small paragraph.</p><br><hr>
+        </div>    <!-- End of Toggle -->
+    </div>    <!-- End of Div - 4 -->
+    
+    
+    <!-- Div - 5 -->
+    <div class="row">
+       <!-- Fade In -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+        <button id="fadein">Click to fade in boxes</button><br><br>
+
+        <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+        <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+        <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div><br><hr>
+        </div>    <!-- End of Fade In -->
+        
+        
+        
+        <!-- Fade Out -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <p>Demonstrate fadeOut() with different parameters.</p>
+
+            <button id="fadeout">Click to fade out boxes</button><br><br>
+
+            <div id="fadeoutdiv1" style="width:80px;height:80px;background-color:red;"></div><br>
+            <div id="fadeoutdiv2" style="width:80px;height:80px;background-color:green;"></div><br>
+            <div id="fadeoutdiv3" style="width:80px;height:80px;background-color:blue;"></div><br><hr>
+        </div>    <!-- End of Fade Out -->
+        
+        
+        <!-- Fade In/Out -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <p>Demonstrate fadeToggle() with different speed parameters.</p>
+
+            <button id="inout">Click to fade in/out boxes</button><br><br>
+
+            <div id="inoutdiv1" style="width:80px;height:80px;background-color:red;"></div>
+            <br>
+            <div id="inoutdiv2" style="width:80px;height:80px;background-color:green;"></div>
+            <br>
+            <div id="inoutdiv3" style="width:80px;height:80px;background-color:blue;"></div><br><hr>
+        </div>    <!-- End of Fade In/Out -->
+    </div>    <!-- End of Div - 5 -->
+    
+    
+    
+    <!-- Div - 6 -->
+    <div class="row">
+       <!-- Slide Down -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <div id="flip">Click to slide down panel</div>
+            <div id="panel">Hello world!</div><br><hr>
+        </div>    <!-- End of Slide Down -->
+        
+        
+        <!-- Slide Up -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <div id="upflip">Click to slide up panel</div>
+            <div id="uppanel">Hello world!</div><br><hr>
+        </div>    <!-- End of Slide Up -->
+        
+        
+        <!-- Slide Up/Down -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <div id="updownflip">Click to slide the panel down or up</div>
+            <div id="updownpanel">Hello world!</div><br><hr>
+        </div>    <!-- End of Slide Up/Down -->
+    </div>    <!-- End of Div - 6 -->
+    
+    
+    
+    <!-- Div - 7 -->
+    <div class="row">
+       <!-- Animated -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <button id="animated">Start Animation</button>
+
+            <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+            <div id="animatedbutton" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div><br><br><br><br><br><hr>
+        </div>    <!-- End of Animated -->
+        
+        
+        
+        <!-- Manipulate Multiple -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+        <button id="multiplebutton">Start Animation</button>
+
+            <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+            <div id="multiple" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div><br><br><br><br><br><br><br><hr>
+        </div>    <!-- End of Manipulate Multiple -->
+        
+        
+        <!-- Relative Values -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <button id="relativebutton">Start Animation</button>
+
+            <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+            <div id="relative" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div><br><br><br><br><br><hr>
+        </div>    <!-- End of Relative Values -->
+    </div>    <!-- End of Div - 7 -->
+    
+    
+    <!-- Div - 8 -->
+    <div class="row">
+       <!-- Pre-defined Values -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <p>Click the button multiple times to toggle the animation.</p>
+
+            <button id="predefinebutton">Start Animation</button>
+
+            <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+            <div id="predefine" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div><br><br><br><br><hr>
+        </div>    <!-- End of Pre-defined Values -->
+        
+        
+        
+        <!-- Queue Functionality -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <button id="functionalitybutton">Start Animation</button>
+
+            <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+            <div id="functionality" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div><br><br><br><br><br><br><br><br><br><br><br><br><br><hr>
+        </div>    <!-- End of Queue Functionality -->
+        
+        
+        <!-- Queue Functionality - 2 -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <button id="queue2">Start Animation</button>
+
+            <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+            <div id="queuediv" style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div><br><br><br><br><br><hr>
+        </div>    <!-- End of Queue Functionality - 2 -->
+    </div>    <!-- End of Div - 8 -->
+    
+    
+    <!-- Div - 9 -->
+    <div class="row">
+       <!-- Stop Sliding -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <button id="stop">Stop sliding</button>
+
+            <div id="stopflip">Click to slide down panel</div>
+            <div id="stoppanel">Hello world!</div><hr>
+        </div>    <!-- End of Stop Sliding -->
+        
+        
+        
+        <!-- Paragraph Hide & Notifications -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <button id="phide">Hide</button>
+
+            <p id="pnotifications">This is a paragraph with little content.</p><hr>
+        </div>    <!-- End of Paragraph Hide & Notifications -->
+        
+        
+        <!-- Method Chaining -->
+        <div class="col-md-4 col-sm-12 col-xm-12 text-center">
+            <p id="methodp1">jQuery is fun!!</p>
+
+            <button id="method">Click me</button>
+        </div>    <!-- End of Method Chaining -->
+    </div>    <!-- End of Div - 9 -->
+</body>
+</html>

@@ -1,0 +1,68 @@
+h1{
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: 'Capriola', sans-serif;
+}
+
+
+
+/* Slide Down */
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+
+
+
+/* Slide Up */
+#uppanel, #upflip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#uppanel {
+    padding: 50px;
+}
+
+
+
+/* Slide Up/Down */
+#updownpanel, #updownflip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#updownpanel {
+    padding: 50px;
+    display: none;
+}
+
+
+
+
+/* Stop Sliding */
+#stoppanel, #stopflip {
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border: solid 1px #666;
+    border-radius: 3px;
+}
+
+#stoppanel {
+    padding: 50px;
+    display: none;
+}
